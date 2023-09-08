@@ -1,0 +1,201 @@
+.slider-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.keen-slider {
+  width: 100%;
+  min-width: 100%;
+  max-width: 1680px;
+  margin: auto;
+
+  @media screen and (min-width: $desktop) {
+    min-height: 874px;
+  }
+
+  &__slide {
+    color: #fff;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: row;
+      justify-content: space-around;
+      height: 100%;
+    }
+  }
+
+  //I don't love how this background approach shows through the fade transition; open to feedback about it
+  &__background {
+    background: linear-gradient(180deg, #4385c2 0%, #4f28a4 100.91%);
+    background: url('../img/background.svg') no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    background-position: 50% 130px;
+  }
+  &__image {
+    width: 300px;
+    height: 450px;
+    border-radius: 150px;
+    overflow: hidden;
+    margin: 56px auto;
+
+    @media screen and (min-width: $desktop) {
+      flex-shrink: 0;
+      margin: 0;
+      width: 472px;
+      height: 706px;
+      border-radius: 236px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__quote {
+    margin: 3.6rem;
+    padding-top: 6.4rem;
+
+    @media screen and (min-width: $desktop) {
+      flex-basis: 700px;
+      padding-left: 3rem;
+    }
+
+    blockquote {
+      margin: 0;
+      position: relative;
+      margin-bottom: 76px;
+
+      @media screen and (min-width: $desktop) {
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: $desktop-big) {
+        margin-bottom: 60px;
+      }
+
+      p {
+        margin-top: 0;
+
+        &.quote {
+          line-height: 150%;
+          margin-top: 6.4rem;
+
+          @media screen and (min-width: $desktop) {
+            margin-top: 0;
+          }
+
+          &::before,
+          &::after {
+            font-family: $sans;
+            font-weight: $bold;
+            font-size: 3.6rem;
+            position: absolute;
+            top: -36px;
+
+            @media screen and (min-width: $desktop) {
+              font-size: 4.2rem;
+              top: 1.5rem;
+              line-height: 0;
+            }
+          }
+
+          &::before {
+            content: '\201C';
+
+            @media screen and (min-width: $desktop) {
+              left: -3rem;
+            }
+          }
+
+          &::after {
+            content: '\201D';
+            left: 3.6rem;
+            @media screen and (min-width: $desktop) {
+              position: relative;
+              left: inherit;
+              right: -1rem;
+            }
+          }
+        }
+
+        &.cite {
+          font-weight: $light;
+          line-height: 122%;
+          text-align: right;
+
+          &::before {
+            content: '\2014';
+            font-family: $sans;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Slider navigation plugin
+.navigation {
+  &-wrapper {
+    position: relative;
+  }
+
+  &-controls {
+    position: absolute;
+    height: 32px;
+    top: 556px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    @media screen and (min-width: $desktop) {
+      top: inherit;
+      bottom: 86px;
+    }
+  }
+}
+.dots {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.dot {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin: 0 16px;
+  padding: 5px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--active {
+    background: #fff;
+  }
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  &,
+  &--disabled.arrow {
+    &--left {
+      background: url('../img/arrow-left.svg') no-repeat;
+      padding-right: 10px;
+    }
+
+    &--right {
+      background: url('../img/arrow-right.svg') no-repeat;
+      padding-left: 10px;
+    }
+  }
+}

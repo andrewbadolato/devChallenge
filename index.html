@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Dev Challenge Slider</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css">
+        <link rel="stylesheet" href="./dist/css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+        <script src="./dist/js/script.js"></script>
+    </head>
+
+    <body>
+        <div class="page-wrapper">
+            <div class="page-1-column">
+                <h1>Dev Challenge Slider</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis congue tincidunt. In leo justo, pellentesque vel dui eu, blandit congue nulla. Phasellus vel velit leo. In rhoncus et sapien eu porttitor. Etiam finibus non nisl eget hendrerit. Proin sem orci, iaculis ac ligula sit amet, consectetur dapibus ligula. Proin quis leo sollicitudin, dapibus arcu quis, sodales lorem. Donec erat augue, luctus eu malesuada et, feugiat non nibh. Quisque imperdiet lorem neque, sit amet rhoncus ex ultricies a. Fusce ac elementum est, ut lobortis ipsum.</p>
+            </div>
+            <div class="slider-wrapper">
+                <div id="my-slider" class="keen-slider">
+                    <div class="keen-slider__background">
+                    </div>
+                    <div class="keen-slider__slide">
+                        <div class="keen-slider__image">
+                            <img src="./dist/img/john-doe.png">
+                        </div>
+                        <div class="keen-slider__quote">
+                            <h3>This is a Longer Company Name.</h3>
+                            <blockquote>
+                                <p class="quote">Aenean a commodo risus. Morbi iaculis sem id turpis condimentum placerat. Ut eleifend sodales ante. Aenean pellentesque commodo consequat. Mauris scelerisque dignissim dignissim. Curabitur posuere lorem vitae purus bibendum, aliquam accumsan dolor rutrum. Phasellus laoreet varius enim.</p>
+                                <p class="cite">John Doe, CEO</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="keen-slider__slide">
+                        <div class="keen-slider__image">
+                            <img src="./dist/img/jane-doe.png">
+                        </div>
+                        <div class="keen-slider__quote">
+                            <h3>Company Name 2</h3>
+                            <blockquote>
+                                <p class="quote">Aenean a commodo risus. Morbi iaculis sem id turpis condimentum placerat. Ut eleifend sodales ante. Aenean pellentesque commodo consequat. Mauris scelerisque dignissim dignissim. Curabitur posuere lorem vitae purus bibendum, aliquam accumsan dolor rutrum. Phasellus laoreet varius enim.</p>
+                                <p class="cite">Jane Doe, CFO</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="keen-slider__slide">
+                        <div class="keen-slider__image">
+                            <img src="./dist/img/jim-doe.png">
+                        </div>
+                        <div class="keen-slider__quote">
+                            <h3>Company Name 3</h3>
+                            <blockquote>
+                                <p class="quote">Aenean a commodo risus. Morbi iaculis sem id turpis condimentum placerat. Ut eleifend sodales ante. Aenean pellentesque commodo consequat. Mauris scelerisque dignissim dignissim. Curabitur posuere lorem vitae purus bibendum, aliquam accumsan dolor rutrum. Phasellus laoreet varius enim. Mauris scelerisque dignissim dignissim. Curabitur posuere lorem vitae purus bibendum, aliquam accumsan dolor.</p>
+                                <p class="cite">Jim Doe, Director of National Accounts</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="keen-slider__slide">
+                        <div class="keen-slider__image">
+                            <img src="./dist/img/cat-doe.png">
+                        </div>
+                        <div class="keen-slider__quote">
+                            <h3>Company Name 4</h3>
+                            <blockquote>
+                                <p class="quote">Norwegian forest and cougar for himalayan. Sphynx. American bobtail. Tiger egyptian mau. Tomcat british shorthair and tomcat but thai, bengal. Maine coon british shorthair or singapura persian tabby. Donskoy. Bobcat tom or savannah so panther or ocelot. Lynx tabby singapura. Grimalkin abyssinian.</p>
+                                <p class="cite">Cat Doe, CIO</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="page-1-column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis congue tincidunt. In leo justo, pellentesque vel dui eu, blandit congue nulla. Phasellus vel velit leo. In rhoncus et sapien eu porttitor. Etiam finibus non nisl eget hendrerit. Proin sem orci, iaculis ac ligula sit amet, consectetur dapibus ligula. Proin quis leo sollicitudin, dapibus arcu quis, sodales lorem. Donec erat augue, luctus eu malesuada et, feugiat non nibh. Quisque imperdiet lorem neque, sit amet rhoncus ex ultricies a. Fusce ac elementum est, ut lobortis ipsum.</p>
+                <p>Suspendisse nibh lorem, hendrerit sit amet convallis viverra, maximus eget leo. Ut quis sagittis elit, in ullamcorper nisi. Proin sollicitudin diam sit amet odio interdum, sit amet ornare elit porttitor. Suspendisse et ultricies ipsum, sed cursus massa. Cras justo nulla, tristique at bibendum ut, lacinia tempus nunc. Integer non nulla sit amet nunc suscipit faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum ultricies risus, vel semper nisi aliquam at. Etiam pulvinar bibendum accumsan. Morbi vitae libero erat.</p>
+            </div>
+        </div>
+        <script>
+            var slider = new KeenSlider(
+                "#my-slider",
+                {
+                    loop: true,
+                    defaultAnimation: {
+                        duration: 3000,
+                    },
+                    detailsChanged: (s) => {
+                        s.slides.forEach((element, idx) => {
+                            element.style.opacity = s.track.details.slides[idx].portion;
+                        });
+                    },
+
+                },
+                [navigation]
+            );
+        </script>
+    </body>
+
+</html>

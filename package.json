@@ -1,0 +1,26 @@
+{
+  "name": "basic-compile-package",
+  "version": "1.0.0",
+  "description":"Package to compile SASS; includes autoprefixer and combining media queries.",
+
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "caniuse-lite": "^1.0.30001430",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "postcss-combine-media-query": "^1.0.1",
+    "sass": "^1.64.0",
+    "update-browserslist-db": "1.0.11"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "build": "gulp default"
+  }
+}

@@ -1,0 +1,210 @@
+@charset "UTF-8";
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4.8rem;
+  margin-bottom: 6.4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 125%;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.page-wrapper {
+  max-width: 1680px;
+  margin: auto;
+}
+
+.page-1-column {
+  padding: 30px;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.keen-slider {
+  width: 100%;
+  min-width: 100%;
+  max-width: 1680px;
+  margin: auto;
+}
+.keen-slider__slide {
+  color: #fff;
+}
+.keen-slider__background {
+  background: linear-gradient(180deg, #4385c2 0%, #4f28a4 100.91%);
+  background: url("../img/background.svg") no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  background-position: 50% 130px;
+}
+.keen-slider__image {
+  width: 300px;
+  height: 450px;
+  border-radius: 150px;
+  overflow: hidden;
+  margin: 56px auto;
+}
+.keen-slider__image img {
+  width: 100%;
+  height: auto;
+}
+.keen-slider__quote {
+  margin: 3.6rem;
+  padding-top: 6.4rem;
+}
+.keen-slider__quote blockquote {
+  margin: 0;
+  position: relative;
+  margin-bottom: 76px;
+}
+.keen-slider__quote blockquote p {
+  margin-top: 0;
+}
+.keen-slider__quote blockquote p.quote {
+  line-height: 150%;
+  margin-top: 6.4rem;
+}
+.keen-slider__quote blockquote p.quote::before, .keen-slider__quote blockquote p.quote::after {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 3.6rem;
+  position: absolute;
+  top: -36px;
+}
+.keen-slider__quote blockquote p.quote::before {
+  content: "“";
+}
+.keen-slider__quote blockquote p.quote::after {
+  content: "”";
+  left: 3.6rem;
+}
+.keen-slider__quote blockquote p.cite {
+  font-weight: 300;
+  line-height: 122%;
+  text-align: right;
+}
+.keen-slider__quote blockquote p.cite::before {
+  content: "—";
+  font-family: Montserrat, sans-serif;
+}
+
+.navigation-wrapper {
+  position: relative;
+}
+.navigation-controls {
+  position: absolute;
+  height: 32px;
+  top: 556px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.dots {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.dot {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin: 0 16px;
+  padding: 5px;
+  cursor: pointer;
+}
+.dot:focus {
+  outline: none;
+}
+.dot--active {
+  background: #fff;
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.arrow--left, .arrow--disabled.arrow--left {
+  background: url("../img/arrow-left.svg") no-repeat;
+  padding-right: 10px;
+}
+.arrow--right, .arrow--disabled.arrow--right {
+  background: url("../img/arrow-right.svg") no-repeat;
+  padding-left: 10px;
+}
+@media screen and (min-width: 992px){
+  h3 {
+    font-size: 3.2rem;
+  }
+  .keen-slider {
+    min-height: 874px;
+  }
+  .keen-slider__slide {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+  }
+  .keen-slider__image {
+    flex-shrink: 0;
+    margin: 0;
+    width: 472px;
+    height: 706px;
+    border-radius: 236px;
+  }
+  .keen-slider__quote {
+    flex-basis: 700px;
+    padding-left: 3rem;
+  }
+  .keen-slider__quote blockquote {
+    margin-bottom: 0;
+  }
+  .keen-slider__quote blockquote p.quote {
+    margin-top: 0;
+  }
+  .keen-slider__quote blockquote p.quote::before, .keen-slider__quote blockquote p.quote::after {
+    font-size: 4.2rem;
+    top: 1.5rem;
+    line-height: 0;
+  }
+  .keen-slider__quote blockquote p.quote::before {
+    left: -3rem;
+  }
+  .keen-slider__quote blockquote p.quote::after {
+    position: relative;
+    left: inherit;
+    right: -1rem;
+  }
+  .navigation-controls {
+    top: inherit;
+    bottom: 86px;
+  }
+}
+@media screen and (min-width: 1200px){
+  .keen-slider__quote blockquote {
+    margin-bottom: 60px;
+  }
+}
