@@ -153,6 +153,7 @@ p {
 .arrow--right, .arrow--disabled.arrow--right {
   background: url("../img/arrow-right.svg") no-repeat;
   padding-left: 10px;
+  margin-left: 10px;
 }
 @media screen and (min-width: 992px){
   h3 {
