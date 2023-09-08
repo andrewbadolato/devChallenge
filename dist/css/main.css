@@ -198,6 +198,9 @@ p {
     left: inherit;
     right: -1rem;
   }
+  .keen-slider__quote blockquote p.cite {
+    font-size: 2.4rem;
+  }
   .navigation-controls {
     top: inherit;
     bottom: 86px;
